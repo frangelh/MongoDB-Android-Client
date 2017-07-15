@@ -33,23 +33,57 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                    <EditText
+                        android:id="@+id/txt_movimiento_codigo"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="CODIGO" />
+
+
+                    <Spinner
+                        android:id="@+id/spinner_movimiento_tipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/txt_movimiento_articulo"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="ARTICULO" />
+
+                    <EditText
+                        android:id="@+id/txt_movimiento_cantidad"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="CANTIDAD" />
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/btn_procesa_movimiento"
+                            android:id="@+id/btn_movimiento_procesar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#2D9B20"
+                            android:textColor="@android:color/primary_text_dark_nodisable"
                             android:text="Procesar Movimiento" />
 
                         <Button
-                            android:id="@+id/btn_procesar_cancelar"
+                            android:id="@+id/btn_movimiento_cancelar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Cancelar" />
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="#E84539"
+                            android:text="Cancelar"
+                            android:textColor="@android:color/primary_text_dark_nodisable" />
 
                     </LinearLayout>
 
@@ -62,6 +96,29 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_pedido_procesar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#2D9B20"
+                            android:text="Procesar Pedido" />
+
+                        <Button
+                            android:id="@+id/btn_pedido_cancelar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="#E84539"
+                            android:text="Cancelar"
+                            android:textColor="@android:color/primary_text_dark_nodisable" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
                 <!--TAB3 EXISTENCIA-->
@@ -71,7 +128,45 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
+                        <EditText
+                            android:id="@+id/txt_existencia_filtro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:hint="Filtrar Articulo" />
+
+                        <Button
+                            android:id="@+id/btn_existencia_buscar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="#ff0099cc"
+                            android:text="Buscar"
+                            android:textColor="@android:color/primary_text_dark_nodisable" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/lista_dialog_elegir_articulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fadeScrollbars="false"></ListView>
+
+                    <Button
+                        android:id="@+id/btn_existencia_cancelar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="#E84539"
+                        android:text="Atras"
+                        android:textColor="@android:color/primary_text_dark_nodisable" />
                 </LinearLayout>
             </FrameLayout>
 
